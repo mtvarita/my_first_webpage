@@ -1,4 +1,29 @@
 // ===============================
+// Audio Unlock Helper for Mobile
+// ===============================
+const music = document.getElementById("bgMusic");
+
+function unlockAudio() {
+    if (music) {
+        music.volume = 0.5;
+        // Play and immediately pause to force mobile browsers to unlock audio
+        music.play().then(() => {
+            // Audio unlocked successfully
+        }).catch(err => {
+            console.log("Audio unlock error:", err);
+        });
+    }
+    // Remove listeners once unlocked on first tap
+    document.removeEventListener("touchstart", unlockAudio);
+    document.removeEventListener("click", unlockAudio);
+}
+
+// Attach touch listeners to unlock audio on first screen interaction
+document.addEventListener("touchstart", unlockAudio, { once: true });
+document.addEventListener("click", unlockAudio, { once: true });
+
+
+// ===============================
 // Loading Screen
 // ===============================
 
@@ -182,21 +207,22 @@ clearInterval(typing);
 
 const continueBtn = document.getElementById("continueBtn");
 
-continueBtn.addEventListener("click", () => {
-    // Retry playing music on button tap if mobile blocked it earlier
-    const music = document.getElementById("bgMusic");
-    if (music && music.paused) {
-        music.volume = 0.5;
-        music.play().catch(err => console.log("Music play failed:", err));
-    }
+    const handleContinue = () => {
+        // Fallback retry for mobile audio playback
+        if (music && music.paused) {
+            music.volume = 0.5;
+            music.play().catch(err => console.log("Music play error on continue:", err));
+        }
 
-    document.getElementById("letterPage").style.display = "none";
-    document.getElementById("scrapbook").style.display = "block";
+        document.getElementById("letterPage").style.display = "none";
+        document.getElementById("scrapbook").style.display = "block";
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
 
+    continueBtn.addEventListener("touchstart", handleContinue);
+    continueBtn.addEventListener("click", handleContinue);
 }
