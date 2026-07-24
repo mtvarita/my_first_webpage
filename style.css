@@ -1,0 +1,660 @@
+/* ===========================
+   Google Font Defaults
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#eef6ff;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* ===========================
+   Loading Screen
+=========================== */
+
+#loadingScreen{
+
+    position:fixed;
+    inset:0;
+
+    background:linear-gradient(180deg,#7ab6ff,#cfe7ff);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+
+    transition:1s;
+
+}
+
+.loadingText{
+
+    font-size:22px;
+    letter-spacing:3px;
+
+    opacity:.9;
+
+}
+
+#loadingScreen h1{
+
+    margin-top:15px;
+
+    font-size:55px;
+
+    font-family:'Playfair Display',serif;
+
+}
+
+/* ===========================
+   Lock Screen
+=========================== */
+
+#lockScreen{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    background:url("images/lockscreen.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+/* dark blur */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    rgba(0,0,0,.20),
+    rgba(0,0,0,.45)
+    );
+
+    backdrop-filter:blur(2px);
+
+}
+
+/* ===========================
+   Time
+=========================== */
+
+.top{
+
+    position:relative;
+
+    z-index:10;
+
+    margin-top:70px;
+
+    text-align:center;
+
+}
+
+.time{
+
+    font-size:90px;
+
+    font-weight:200;
+
+}
+
+.date{
+
+    margin-top:5px;
+
+    font-size:23px;
+
+    letter-spacing:1px;
+
+}
+
+/* ===========================
+   Swipe
+=========================== */
+
+.bottom{
+
+    position:relative;
+
+    z-index:10;
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+}
+
+.swipeText{
+
+    font-size:18px;
+
+    opacity:.95;
+
+    animation:float 2s infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   Passcode
+=========================== */
+
+#passcodePage{
+
+display:none;
+
+height:100vh;
+
+background:linear-gradient(
+180deg,
+#7db8ff,
+#dcefff
+);
+
+color:white;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+}
+
+#passcodePage h2{
+
+font-size:35px;
+
+margin-bottom:10px;
+
+}
+
+#passcodePage p{
+
+margin-bottom:35px;
+
+opacity:.9;
+
+}
+
+.dots{
+
+display:flex;
+
+gap:15px;
+
+margin-bottom:40px;
+
+}
+
+.dots span{
+
+width:18px;
+
+height:18px;
+
+border:2px solid white;
+
+border-radius:50%;
+
+}
+
+.keypad{
+
+display:grid;
+
+grid-template-columns:repeat(3,90px);
+
+gap:20px;
+
+}
+
+.keypad button{
+
+height:85px;
+
+border:none;
+
+border-radius:50%;
+
+font-size:28px;
+
+cursor:pointer;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(15px);
+
+color:white;
+
+transition:.3s;
+
+}
+
+.keypad button:hover{
+
+transform:scale(1.08);
+
+background:rgba(255,255,255,.28);
+
+}
+
+
+
+
+/* ==========================================
+   LETTER PAGE
+========================================== */
+
+#letterPage{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:linear-gradient(180deg,#edf7ff,#d7ebff);
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 20px;
+
+}
+
+.letter{
+
+    width:90%;
+    max-width:800px;
+
+    background:#fffdf8;
+
+    color:#444;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+    transform:rotate(-1deg);
+
+    position:relative;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.letter::before{
+
+    content:"❤️";
+
+    position:absolute;
+
+    top:-18px;
+
+    right:25px;
+
+    font-size:30px;
+
+}
+
+.letter h1{
+
+    font-family:'Caveat',cursive;
+
+    font-size:55px;
+
+    color:#2d5fa8;
+
+    margin-bottom:30px;
+
+}
+
+.letter p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+}
+
+#continueBtn{
+
+    margin-top:40px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    background:#5d9dff;
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+#continueBtn:hover{
+
+    transform:translateY(-4px);
+
+    background:#3d82f0;
+
+}
+
+/* ==========================================
+   SCRAPBOOK
+========================================== */
+
+#scrapbook{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:#f7f5ef;
+
+    padding:90px 8%;
+
+}
+
+.scrapbookTitle{
+
+    text-align:center;
+
+    color:#4678c9;
+
+    font-size:55px;
+
+    font-family:'Playfair Display',serif;
+
+    margin-bottom:70px;
+
+}
+
+.memory{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+    margin-bottom:120px;
+
+    flex-wrap:wrap;
+
+}
+
+.memory:nth-child(even){
+
+    flex-direction:row-reverse;
+
+}
+
+.photo{
+
+    width:320px;
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+
+    transform:rotate(-3deg);
+
+    transition:.4s;
+
+}
+
+.photo:hover{
+
+    transform:rotate(0deg) scale(1.05);
+
+}
+
+.photo img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:5px;
+
+}
+
+.caption{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    font-family:'Caveat',cursive;
+
+    color:#555;
+
+    font-size:28px;
+
+}
+
+.note{
+
+    flex:1;
+
+    color:#444;
+
+}
+
+.note h2{
+
+    color:#3b6fbe;
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+.note p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================
+   ENDING
+========================================== */
+
+#ending{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:linear-gradient(#06162d,#01050d);
+
+    color:white;
+
+    text-align:center;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+#ending h1{
+
+    font-size:65px;
+
+    font-family:'Playfair Display',serif;
+
+    margin-bottom:25px;
+
+}
+
+#ending p{
+
+    font-size:28px;
+
+    opacity:.9;
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.time{
+
+font-size:70px;
+
+}
+
+.scrapbookTitle{
+
+font-size:38px;
+
+}
+
+.memory{
+
+flex-direction:column !important;
+
+}
+
+.photo{
+
+width:90%;
+
+}
+
+.note{
+
+text-align:center;
+
+}
+
+.letter{
+
+padding:30px;
+
+}
+
+.letter h1{
+
+font-size:42px;
+
+}
+
+.letter p{
+
+font-size:18px;
+
+}
+
+#ending h1{
+
+font-size:42px;
+
+}
+
+}

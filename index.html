@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>If You Ever Forget...</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+<script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <audio id="bgMusic" loop preload="auto">
+    <source src="music/blue.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ========================= -->
+<!-- Loading Screen -->
+<!-- ========================= -->
+
+<div id="loadingScreen">
+
+    <div class="loadingText">
+        Made especially for
+    </div>
+
+    <h1>
+        Vignesh ❤️
+    </h1>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- Lock Screen -->
+<!-- ========================= -->
+
+<section id="lockScreen">
+
+<div class="overlay"></div>
+
+<div class="top">
+
+<div class="time">
+
+11:11
+
+</div>
+
+<div class="date">
+
+If You Ever Forget...
+
+</div>
+
+</div>
+
+<div class="bottom">
+
+<div class="swipeText">
+
+Swipe up to unlock
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- Passcode -->
+<!-- ========================= -->
+
+<section id="passcodePage">
+
+<h2>
+
+Enter Passcode
+
+</h2>
+
+<p>
+
+Only one person knows it ❤️
+
+</p>
+
+<div class="dots">
+
+<span id="d1"></span>
+<span id="d2"></span>
+<span id="d3"></span>
+<span id="d4"></span>
+
+</div>
+
+<div class="keypad">
+
+<button>1</button>
+<button>2</button>
+<button>3</button>
+
+<button>4</button>
+<button>5</button>
+<button>6</button>
+
+<button>7</button>
+<button>8</button>
+<button>9</button>
+
+<button>❤️</button>
+<button>0</button>
+<button>⌫</button>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- Letter -->
+<!-- (Hidden for now) -->
+<!-- ========================= -->
+
+<section id="letterPage">
+
+<div class="letter">
+
+<h1>
+
+Hiii Vignesh ❤️
+
+</h1>
+
+<p>
+
+(Your letter will appear here with a typewriter animation.)
+
+</p>
+
+<button id="continueBtn">
+
+Open Our Memories →
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- Scrapbook -->
+<!-- (Coming in Part 2) -->
+<!-- ========================= -->
+
+
+<section id="scrapbook">
+
+<h1 class="scrapbookTitle">
+Our Story ❤️
+</h1>
+
+<!-- Memory 1 -->
+
+<div class="memory fade">
+
+    <div class="photo">
+
+        <img src="images/photo1.jpg" alt="Road Trip">
+
+        <div class="caption">
+
+            The Little Road Trip 🚗
+
+        </div>
+
+    </div>
+
+    <div class="note">
+
+        <h2>
+            The First Time We Held Hands
+        </h2>
+
+        <p>
+
+            I'll never forget that little road trip.
+
+            It was the first time we held hands.
+
+            It felt like such a tiny moment then...
+
+            but today it's one of my favourite memories.
+
+            Every time I think about it,
+
+            I smile.
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Memory 2 -->
+
+<div class="memory fade">
+
+    <div class="photo">
+
+        <img src="images/photo2.jpg" alt="Windy Day">
+
+        <div class="caption">
+
+            My Favourite Weather 🍃
+
+        </div>
+
+    </div>
+
+    <div class="note">
+
+        <h2>
+
+            That Hug
+
+        </h2>
+
+        <p>
+
+            I don't think I'll ever forget that hug.
+
+            The weather was so windy.
+
+            Everything around us disappeared.
+
+            It was just you and me.
+
+            Even now...
+
+            whenever the wind blows like that,
+
+            it reminds me of you.
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Memory 3 -->
+
+<div class="memory fade">
+
+    <div class="photo">
+
+        <img src="images/photo3.jpg">
+
+        <div class="caption">
+
+            One Of My Favourite Pictures ❤️
+
+        </div>
+
+    </div>
+
+    <div class="note">
+
+        <h2>
+
+            You.
+
+        </h2>
+
+        <p>
+
+            There are thousands of pictures.
+
+            Yet somehow...
+
+            these always become my favourite.
+
+            Maybe because every single one
+
+            reminds me
+
+            how lucky I feel.
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Hidden Note -->
+
+<div class="memory fade">
+
+<div class="note">
+
+<h2>
+
+A Little Secret ❤️
+
+</h2>
+
+<p>
+
+If you're reading this...
+
+thank you.
+
+Thank you for every smile.
+
+Every hug.
+
+Every memory.
+
+Every laugh.
+
+Thank you for staying.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Music -->
+
+<div style="text-align:center;margin-top:100px;">
+
+<h2 style="color:#3d74c5;">
+
+🎵 Now Playing
+
+</h2>
+
+<p>
+
+Blue — Yung Kai
+
+</p>
+
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- Ending -->
+<!-- ========================= -->
+
+<section id="ending">
+
+<h1>
+
+Forever yours ❤️
+
+</h1>
+
+<p>
+
+— Tvarita
+
+</p>
+
+</section>
+
+</body>
+</html>
