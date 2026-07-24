@@ -183,6 +183,13 @@ clearInterval(typing);
 const continueBtn = document.getElementById("continueBtn");
 
 continueBtn.addEventListener("click", () => {
+    // Retry playing music on button tap if mobile blocked it earlier
+    const music = document.getElementById("bgMusic");
+    if (music && music.paused) {
+        music.volume = 0.5;
+        music.play().catch(err => console.log("Music play failed:", err));
+    }
+
     document.getElementById("letterPage").style.display = "none";
     document.getElementById("scrapbook").style.display = "block";
 
@@ -191,7 +198,5 @@ continueBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
-
-
 
 }
